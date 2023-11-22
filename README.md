@@ -1,5 +1,6 @@
 # 100 Days of Code : Java, Data Structures And Algorithms
 
+![100daysofcode_OG_banner-06-06](https://github.com/Mohiitdeshmukh/100-DaysOfCode/assets/91624758/c617bf3e-d23d-43a7-824c-bb04c47240fc)
 
 ## Goal
 
