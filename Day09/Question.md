@@ -1,0 +1,9 @@
+# Question topic -   Set Matrix Zeroes
+
+## Question Link - https://leetcode.com/problems/set-matrix-zeroes/
+
+## Description
+Given a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.
+
+## Constraints:
+1 <= n <= 20
