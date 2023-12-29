@@ -1,26 +1,34 @@
 class Solution {
-    int counter = 0;
-    public int pathSum(TreeNode root, int sum) {
-
-        if (root == null) return 0;
-
-        pathSumHelper(root, sum, 0);
-        pathSum(root.left, sum);
-        pathSum(root.right, sum);
-
-        return counter;
-
+    public int pathSum(TreeNode root, int targetSum) {
+    return solve(root, targetSum, new ArrayList<>(), 0);
     }
 
-    void pathSumHelper(TreeNode root, int sum, int currentSum) {
+    private int solve(TreeNode root, int targetSum, ArrayList<TreeNode> path, long currentSum) {
         if (root == null) {
-            return;
+            return 0;
         }
+
+        path.add(root);
         currentSum += root.val;
-        if (currentSum == sum) {
-            counter++;
+
+        int count = 0;
+        long sum = 0;
+
+        for (int i = path.size() - 1; i >= 0; i--) {
+            sum += path.get(i).val;
+            if (sum == targetSum) {
+                count++;
+            }
         }
-        pathSumHelper(root.left, sum, currentSum);
-        pathSumHelper(root.right, sum, currentSum);
-    } 
+
+        count += solve(root.left, targetSum, path, currentSum);
+        count += solve(root.right, targetSum, path, currentSum);
+
+        // Backtrack: Remove the current node from the path and subtract its value from currentSum
+        path.remove(path.size() - 1);
+        currentSum -= root.val;
+
+        return count;
+    }
+
 }
