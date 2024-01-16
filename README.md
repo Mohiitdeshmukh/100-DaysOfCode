@@ -50,6 +50,8 @@ There are many resources available to help you with the 100 Days of Code Challen
 
 * Let's get connected over [LinkedIn](https://www.linkedin.com/in/mohitdeshmukh/).
 
+* My profile: [Leetcode](https://leetcode.com/Mohit_d/) , 
+              [GeeksforGeeks](https://auth.geeksforgeeks.org/user/mohitdeshmukh1).
 
 
 
